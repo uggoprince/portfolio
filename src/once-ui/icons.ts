@@ -28,13 +28,18 @@ import {
   HiCheckCircle,
   HiOutlineShieldCheck,
   HiOutlineSparkles,
+  HiMiniComputerDesktop,
 } from "react-icons/hi2";
 
 import { RiVisaLine } from "react-icons/ri";
 
-import { FaDiscord, FaGithub, FaGoogle } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaGoogle, FaPeopleGroup } from "react-icons/fa6";
 
 import { LuChevronsLeftRight } from "react-icons/lu";
+
+import { IoSchoolSharp } from "react-icons/io5";
+import { PiStackPlusFill } from "react-icons/pi";
+import { GoHome } from "react-icons/go";
 
 export const iconLibrary: Record<string, IconType> = {
   chevronUp: HiChevronUp,
@@ -59,6 +64,7 @@ export const iconLibrary: Record<string, IconType> = {
   discord: FaDiscord,
   google: FaGoogle,
   github: FaGithub,
+  linkedin: FaLinkedin,
   arrowUpRight: HiArrowUpRight,
   minus: HiMiniMinus,
   plus: HiMiniPlus,
@@ -69,4 +75,9 @@ export const iconLibrary: Record<string, IconType> = {
   visa: RiVisaLine,
   security: HiOutlineShieldCheck,
   sparkle: HiOutlineSparkles,
+  computer: HiMiniComputerDesktop,
+  education: IoSchoolSharp,
+  people: FaPeopleGroup,
+  stack: PiStackPlusFill,
+  home: GoHome,
 };

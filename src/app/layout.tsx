@@ -10,6 +10,9 @@ import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { effects } from "@/utils/config";
 
 const primary = Inter({
   variable: "--font-primary",
@@ -125,34 +128,72 @@ export default function RootLayout({
         />
       </head>
       <ToastProvider>
-        <Column as="body" fillWidth  margin="0" padding="0">
+        <Column style={{ minHeight: "100vh" }} as="body" fillWidth  margin="0" padding="0">
           <Background
             position="absolute"
             mask={{
-              x: 100,
+              x: 0,
               y: 0,
-              radius: 100,
+              radius: 75,
+              cursor: true,
             }}
             gradient={{
               display: true,
-              x: 100,
-              y: 60,
-              width: 70,
-              height: 50,
-              tilt: -40,
-              opacity: 90,
-              colorStart: "accent-background-strong",
-              colorEnd: "page-background",
+              x: effects.gradient.x,
+              y: effects.gradient.y,
+              width: effects.gradient.width,
+              height: effects.gradient.height,
+              tilt: effects.gradient.tilt,
+              opacity: effects.gradient.opacity as
+                | 0
+                | 10
+                | 20
+                | 30
+                | 40
+                | 50
+                | 60
+                | 70
+                | 80
+                | 90
+                | 100,
+              // colorStart: "accent-background-strong",
+              colorStart: "brand-background-strong",
+              // colorEnd: "page-background",
+              colorEnd: "static-transparent",
             }}
             grid={{
-              display: true,
+              display: false,
               opacity: 100,
-              width: "0.25rem",
-              color: "neutral-alpha-medium",
-              height: "0.25rem",
+              // width: "0.15rem",
+              color: "neutral-alpha-weak",
+              // height: "0.15rem",
+            }}
+            dots={{
+              display: effects.dots.display,
+              color: effects.dots.color,
+              size: effects.dots.size as any,
+              opacity: effects.dots.opacity as any,
+            }}
+            lines={{
+              display: effects.lines.display,
+              opacity: effects.lines.opacity as any,
             }}
           />
-          {children}
+          <Header />
+          <Flex
+            position="relative"
+            zIndex={0}
+            fillWidth
+            paddingY="l"
+            paddingX="l"
+            horizontal="center"
+            flex={1}
+          >
+            <Flex horizontal="center" fillWidth minHeight="0">
+              {children}
+            </Flex>
+          </Flex>
+          <Footer />
         </Column>
       </ToastProvider>
     </Flex>
