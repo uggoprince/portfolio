@@ -26,7 +26,7 @@ const og = {
   title: "",
   description: "Software Engineer",
   type: "website",
-  image: "/images/cover.jpg"
+  image: "/images/me.jpg"
 };
 
 // default schema data

@@ -13,6 +13,7 @@ export const Footer = () => {
       padding="8"
       horizontal="center"
       mobileDirection="column"
+      // style={{ backgroundColor: "white"}}
     >
       <Flex
         className={styles.mobile}
@@ -22,6 +23,7 @@ export const Footer = () => {
         gap="16"
         horizontal="space-between"
         vertical="center"
+        // style={{ backgroundColor: "red"}}
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
@@ -53,7 +55,7 @@ export const Footer = () => {
           )}
         </Flex>
       </Flex>
-      <Flex height="80" show="s"></Flex>
+      <Flex height="80" show="s" />
     </Flex>
   );
 };

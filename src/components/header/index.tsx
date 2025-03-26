@@ -1,6 +1,6 @@
 "use client"
 
-import { Flex, Line, ToggleButton } from "@/once-ui/components";
+import { Flex, Line, Row, StyleOverlay, ToggleButton } from "@/once-ui/components";
 import { usePathname } from "next/navigation";
 import { routes } from "../../utils/config";
 import styles from "./Header.module.scss";
@@ -15,7 +15,7 @@ export const Header = () => {
             className={styles.position}
             as="header"
             zIndex={9}
-            padding="8"
+            padding="20"
             horizontal="space-evenly"
             >
         {/* <Flex paddingLeft="0" vertical="center" textVariant="body-default-s" hide="s">
@@ -105,6 +105,9 @@ export const Header = () => {
               )}
             </Flex>
           </Flex>
+          <Row position="fixed" top="20" right="20">
+              <StyleOverlay position="fixed" top="8" right="8" style={{height: "calc(100vh - var(--static-space-16))"}} />
+          </Row>
         </Flex>
       </Flex>
     );

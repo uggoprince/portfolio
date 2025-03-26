@@ -3,6 +3,7 @@ import "@/once-ui/tokens/index.scss";
 
 import classNames from "classnames";
 import { headers } from "next/headers";
+// biome-ignore lint/style/useImportType: <explanation>
 import { Metadata } from "next";
 
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config";
@@ -49,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: og.title,
       description: og.description,
-      url: "https://" + baseURL,
+      url: `https://${baseURL}`,
       images: [
 				{
 					url: og.image,
@@ -83,7 +84,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": schema.type,
-  url: "https://" + baseURL,
+  url: `https://${baseURL}`,
   logo: schema.logo,
   name: schema.name,
   description: schema.description,
@@ -100,7 +101,6 @@ export default function RootLayout({
     <Flex
       as="html"
       lang="en"
-      fillHeight
       background="page"
       data-neutral={style.neutral}
       data-brand={style.brand}
@@ -122,18 +122,20 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schemaData),
           }}
         />
       </head>
       <ToastProvider>
-        <Column style={{ minHeight: "100vh" }} as="body" fillWidth  margin="0" padding="0">
+        <Column 
+        as="body" fillWidth margin="0" padding="0">
           <Background
-            position="absolute"
+            position="fixed"
             mask={{
-              x: 0,
-              y: 0,
+              x: effects.mask.x,
+              y: effects.mask.y,
               radius: 75,
               cursor: true,
             }}
@@ -158,8 +160,8 @@ export default function RootLayout({
                 | 100,
               // colorStart: "accent-background-strong",
               colorStart: "brand-background-strong",
-              // colorEnd: "page-background",
-              colorEnd: "static-transparent",
+              colorEnd: "page-background",
+              // colorEnd: "static-transparent",
             }}
             grid={{
               display: false,
@@ -171,11 +173,14 @@ export default function RootLayout({
             dots={{
               display: effects.dots.display,
               color: effects.dots.color,
+              // biome-ignore lint/suspicious/noExplicitAny: <explanation>
               size: effects.dots.size as any,
+              // biome-ignore lint/suspicious/noExplicitAny: <explanation>
               opacity: effects.dots.opacity as any,
             }}
             lines={{
               display: effects.lines.display,
+              // biome-ignore lint/suspicious/noExplicitAny: <explanation>
               opacity: effects.lines.opacity as any,
             }}
           />
@@ -184,12 +189,13 @@ export default function RootLayout({
             position="relative"
             zIndex={0}
             fillWidth
-            paddingY="l"
-            paddingX="l"
+            paddingY="s"
+            paddingX="24"
             horizontal="center"
             flex={1}
+            style={{ minHeight: "100px" }}
           >
-            <Flex horizontal="center" fillWidth minHeight="0">
+            <Flex horizontal="center" fillWidth maxWidth={62} style={{}}>
               {children}
             </Flex>
           </Flex>
