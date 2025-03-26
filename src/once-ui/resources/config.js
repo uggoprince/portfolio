@@ -5,7 +5,7 @@ const style = {
   theme: "dark", // dark | light
   neutral: "slate", // sand | gray | slate
   brand: "aqua", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "indigo", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "color", // color | contrast | inverse
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
@@ -23,7 +23,7 @@ const meta = {
 
 // default open graph data
 const og = {
-  title: "",
+  title: "Ugo Anayo",
   description: "Software Engineer",
   type: "website",
   image: "/images/me.jpg"
@@ -31,9 +31,9 @@ const og = {
 
 // default schema data
 const schema = {
-  logo: "",
-  type: "Organization",
-  name: "One UI",
+  logo: "/images/me.jpg",
+  type: "Personal",
+  name: "Portfolio",
   description: "",
   email: "",
 };

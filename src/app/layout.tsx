@@ -189,11 +189,12 @@ export default function RootLayout({
             position="relative"
             zIndex={0}
             fillWidth
+            fillHeight
             paddingY="s"
             paddingX="24"
             horizontal="center"
             flex={1}
-            style={{ minHeight: "100px" }}
+            style={{ minHeight: "80dvh" }}
           >
             <Flex horizontal="center" fillWidth maxWidth={62} style={{}}>
               {children}

@@ -1,14 +1,64 @@
-"use client";
-
-import { Avatar, Button, Column, Flex, Heading, Icon, IconButton, Row, Tag, Text } from "@/once-ui/components";
-import { person, social, about, techStack, education } from "@/utils/content";
+import { Avatar, Button, Column, Flex, Heading, Icon, IconButton, Tag, Text } from "@/once-ui/components";
+import { person, social, about, techStack, education, home } from "@/utils/content";
 import React from "react";
 import styles from "./global.module.scss";
+import { baseURL } from "@/once-ui/resources/config";
+
+export async function generateMetadata() {
+    const title = home.title;
+    const description = home.description;
+    const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  
+    return {
+      title,
+      description,
+      openGraph: {
+        title,
+        description,
+        type: "website",
+        url: `https://${baseURL}`,
+        images: [
+          {
+            url: ogImage,
+            alt: title,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: [ogImage],
+      },
+    };
+}
 
 export default function Home() {
     return (
-        <Column fillWidth minHeight={60} paddingY="s" paddingX="s" horizontal="center" 
-        >
+        <Column fillWidth minHeight={60} paddingY="s" paddingX="s" horizontal="center">
+            <script
+                type="application/ld+json"
+                suppressHydrationWarning
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+                dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    name: home.title,
+                    description: home.description,
+                    url: `https://${baseURL}`,
+                    image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+                    publisher: {
+                    "@type": "Person",
+                    name: person.name,
+                    image: {
+                        "@type": "ImageObject",
+                        url: `${baseURL}${person.avatar}`,
+                    },
+                    },
+                }),
+                }}
+            />
             <Flex fillWidth mobileDirection="column" horizontal="center">
                 <Column
                     className={styles.avatar}

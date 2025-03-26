@@ -20,7 +20,16 @@
   },
   "linter": {
     "enabled": true,
-    "rules": { "recommended": true }
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noVoidElementsWithChildren": "off",
+        "useJsxKeyInIterable": "off"
+      },
+      "complexity": {
+        "noUselessFragments": "off"
+      }
+    }
   },
   "javascript": {
     "formatter": {
