@@ -148,7 +148,7 @@ export const about = {
     },
     calendar: {
       display: true,
-      link: "https://cal.com",
+      link: "https://calendly.com/uggoprince",
     },
     intro: {
       display: true,
