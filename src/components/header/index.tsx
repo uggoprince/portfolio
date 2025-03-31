@@ -86,7 +86,7 @@ export const Header = () => {
                   />
                 </>
               )} */}
-              {routes["/certifications"] && (
+              {/* {routes["/certifications"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
@@ -102,7 +102,7 @@ export const Header = () => {
                     selected={pathname.startsWith("/certifications")}
                   />
                 </>
-              )}
+              )} */}
             </Flex>
           </Flex>
           <Row position="fixed" top="20" right="20">

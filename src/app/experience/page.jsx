@@ -60,7 +60,7 @@ export default function Experience() {
 
             <Column maxWidth="xl" horizontal="start">
                 <Column maxWidth="s">
-                    <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
+                    <RevealFx translateY="1" fillWidth horizontal="start" paddingBottom="m">
                         <Heading wrap="balance" variant="display-strong-l">
                             {experience.headline}
                         </Heading>
@@ -81,25 +81,25 @@ export default function Experience() {
                         {experience.work.experiences.map((my_experience, index) => (
                             <Column key={`${my_experience.company}-${experience.role}-${index}`} fillWidth>
                                 <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                                <Text id={my_experience.company} variant="heading-strong-l">
-                                    {my_experience.company}
-                                </Text>
-                                <Text variant="heading-default-xs" onBackground="neutral-weak">
-                                    {my_experience.timeframe}
-                                </Text>
+                                    <Text id={my_experience.company} variant="heading-strong-l">
+                                        {my_experience.company}
+                                    </Text>
+                                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                                        {my_experience.timeframe}
+                                    </Text>
                                 </Flex>
                                 <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                                     {my_experience.role}
                                 </Text>
                                 <Column as="ul" gap="16">
-                                {my_experience.achievements.map((achievement, index) => (
-                                    <Text
-                                        as="li"
-                                        variant="body-default-m"
-                                        key={`${experience.company}-${index}`}>
-                                        {achievement}
-                                    </Text>
-                                ))}
+                                    {my_experience.achievements.map((achievement, index) => (
+                                        <Text
+                                            as="li"
+                                            variant="body-default-m"
+                                            key={`${experience.company}-${index}`}>
+                                            {achievement}
+                                        </Text>
+                                    ))}
                                 </Column>
                             </Column>
                         ))}

@@ -28,8 +28,8 @@ export const experience = {
   headline: <>Software engineer and builder</>,
   subline: (
     <>
-      I'm Ugo, Software engineer at <InlineCode>Interswitch</InlineCode>, where build intuitive
-      <br /> user and business softwares. After hours, I build my own projects.
+      I'm Ugo, Software engineer at <InlineCode>Interswitch</InlineCode>, building intuitive
+      <br /> user and business softwares. After hours, I work my own projects.
     </>
   ),
   work: {
@@ -187,4 +187,84 @@ export const education = {
     school: 'Federal University of Technology Owerri',
     course: 'Mathematics'
   }]
+};
+
+export const projects = {
+  display: true,
+  label: "Projects",
+  title: "SIDE PROJECTS",
+  work: [
+    {
+      title: "HomeSpace",
+      description: `HomeSpace is an app where you search and find properties you want to rent. It is an idea I am working on still in
+        the development phase.`,
+      about: [
+        <>
+          Link:&nbsp;
+          <SmartLink key={"https://homespace.vercel.app"} href="https://homespace.vercel.app">
+            <Tag variant="accent" size="l" label={"https://homespace.vercel.app"} />
+          </SmartLink>
+        </>,
+        <>
+          Bankend server:&nbsp;
+          <SmartLink key={"https://homespace-xrgv.onrender.com/graphql"} href="https://homespace-xrgv.onrender.com/graphql">
+            <Tag variant="accent" size="l" label={"https://homespace-xrgv.onrender.com/graphql"} />
+          </SmartLink>
+        </>,
+        "The Frontend is built with React and GraphQl using apollo client",
+        "The Backend is built with NodeJS and GraphQl using apollo server express",
+        "The CSS framework is Tailwind CSS."
+      ]
+    },
+    {
+      title: "Journal App",
+      description: "Journal is an all purpose note app. Used for writing and saving notes.",
+      about: [
+        <>
+          apk:&nbsp;
+          <SmartLink key={"https://play.google.com/store/apps/details?id=com.journalingapp"}
+            href="https://play.google.com/store/apps/details?id=com.journalingapp">
+            <Tag variant="accent" size="l" label={"Journal - Google Play"} />
+          </SmartLink>
+        </>,
+        "It uses SQLite DB to save lyrics and SharedPreferences to save last searched data"
+      ]
+    },
+    {
+      title: "Lyrics App",
+      description: "Lyrics is an android app that helps users search for the lyrics of any song.",
+      about: [
+        <>
+          apk:&nbsp;
+          <SmartLink key={"https://play.google.com/store/apps/details?id=com.ugo.lyrics"}
+            href="https://play.google.com/store/apps/details?id=com.ugo.lyrics">
+            <Tag variant="accent" size="l" label={"Lyrics - Google Play"} />
+          </SmartLink>
+        </>,
+        "It uses SQLite DB to save lyrics and SharedPreferences to save last searched data"
+      ]
+    },
+    {
+      title: "AutoMart",
+      description: "AutoMart is an app where individuals can buy and sell cars.",
+      about: [
+        <>
+          Web Link:&nbsp;
+          <SmartLink key={"https://automart-v2.netlify.app"}
+            href="https://automart-v2.netlify.app">
+            <Tag variant="accent" size="l" label={"https://automart-v2.netlify.app"} />
+          </SmartLink>
+        </>,
+        <>
+          API Link:&nbsp;
+          <SmartLink key={"https://automart-2-0-api.onrender.com/api"}
+            href="https://automart-2-0-api.onrender.com/api">
+            <Tag variant="accent" size="l" label={"https://automart-2-0-api.onrender.com/api"} />
+          </SmartLink>
+        </>,
+        "Built with NodeJS and Express.",
+        "Database is MongoDB"
+      ]
+    }
+  ]
 };
