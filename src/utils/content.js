@@ -1,6 +1,6 @@
 import { InlineCode, Tag, SmartLink, Text } from "@/once-ui/components";
 
-const baseURL = "demo.once-ui.com";
+const baseURL = "ugo-anayo.vercel.app";
 
 export const person = {
     firstName: "Ugo",
