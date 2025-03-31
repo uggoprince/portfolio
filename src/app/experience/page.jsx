@@ -104,6 +104,28 @@ export default function Experience() {
                             </Column>
                         ))}
                     </Column>
+                    
+                    {/** first experiences */}
+                    <Heading as="h2" id={experience.work2.title} variant="display-strong-s" marginBottom="m">
+                        {experience.work2.title}
+                    </Heading>
+                    <Column fillWidth gap="s" marginBottom="40">
+                        {experience.work2.experiences.map((my_experience, index) => (
+                            <Column key={`${my_experience.company}-${experience.role}-${index}`} fillWidth>
+                                <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                                    <Text id={my_experience.company} variant="heading-strong-l">
+                                        {my_experience.company}
+                                    </Text>
+                                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                                        {my_experience.timeframe}
+                                    </Text>
+                                </Flex>
+                                <Text variant="body-default-s" onBackground="brand-weak" marginBottom="xs">
+                                    {my_experience.role}
+                                </Text>
+                            </Column>
+                        ))}
+                    </Column>
                 </Column>
             )}
         </Column>

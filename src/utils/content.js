@@ -108,6 +108,27 @@ export const experience = {
       },
     ],
   },
+  work2: {
+    display: true,
+    title: "Other Experiences",
+    experiences: [
+      {
+        company: "Innocent Comprehensive High School | Lagos - Nigeria",
+        timeframe: "2018 - 2019",
+        role: "Data Processing Tutor",
+      },
+      {
+        company: "Self Employed | Nigeria",
+        timeframe: "2017 - 2018",
+        role: "Software Developer",
+      },
+      {
+        company: "National Youth Service | Rivers - Nigeria",
+        timeframe: "2016 - 2017",
+        role: "Corps Member",
+      },
+    ]
+  }
 };
 
 export const social = [
