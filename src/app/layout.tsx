@@ -14,6 +14,7 @@ import { Roboto_Mono } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { effects } from "@/utils/config";
+import "@/app/globals.scss"; // Ensure this is a global SCSS file
 
 const primary = Inter({
   variable: "--font-primary",

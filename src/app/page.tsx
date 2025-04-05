@@ -1,7 +1,7 @@
 import { Avatar, Button, Column, Flex, Heading, Icon, IconButton, Tag, Text } from "@/once-ui/components";
 import { person, social, about, techStack, education, home } from "@/utils/content";
 import React from "react";
-import styles from "./global.module.scss";
+import styles from "./index.module.scss";
 import { baseURL } from "@/once-ui/resources/config";
 
 export async function generateMetadata() {

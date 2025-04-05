@@ -219,6 +219,8 @@ export const projects = {
       title: "HomeSpace",
       description: `HomeSpace is an app where you search and find properties you want to rent. It is an idea I am working on still in
         the development phase.`,
+      link: "https://homespace.vercel.app",
+      preview: true,
       about: [
         <>
           Link:&nbsp;
@@ -240,6 +242,8 @@ export const projects = {
     {
       title: "Journal App",
       description: "Journal is an all purpose note app. Used for writing and saving notes.",
+      link: "https://play.google.com/store/apps/details?id=com.journalingapp",
+      preview: false,
       about: [
         <>
           apk:&nbsp;
@@ -254,6 +258,8 @@ export const projects = {
     {
       title: "Lyrics App",
       description: "Lyrics is an android app that helps users search for the lyrics of any song.",
+      link: "https://play.google.com/store/apps/details?id=com.ugo.lyrics",
+      preview: false,
       about: [
         <>
           apk:&nbsp;
@@ -268,6 +274,8 @@ export const projects = {
     {
       title: "AutoMart",
       description: "AutoMart is an app where individuals can buy and sell cars.",
+      link: "https://automart-v2.netlify.app",
+      preview: false,
       about: [
         <>
           Web Link:&nbsp;

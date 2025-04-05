@@ -5,11 +5,10 @@ import LinkPreview from "@/components/LinkPreview";
 export default function Projects() {
     return (
         <Column fillWidth fillHeight paddingX="s" horizontal="center">
-            {/* <Column fillWidth marginTop="xl"> */}
-                <Heading as="h2" id={projects.title} variant="display-strong-s" marginBottom="m">
-                    {projects.title}
-                </Heading>
-                {/* <LinkPreview url="https://homespace.vercel.app/" /> */}
+            <Heading as="h2" id={projects.title} variant="display-strong-s" marginBottom="m">
+                {projects.title}
+            </Heading>
+            <Column fillWidth marginTop="xl">
                 <Column fillWidth gap="l" marginBottom="40">
                     {projects.work.map((my_project, index) => (
                         <Column key={`${my_project.title}-${index}`} fillWidth>
@@ -19,6 +18,11 @@ export default function Projects() {
                             <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                                 {my_project.description}
                             </Text>
+                            {my_project.preview && 
+                                <Column fillWidth marginBottom="s" horizontal="center">
+                                    <LinkPreview url={my_project.link} />
+                                </Column>
+                            }
                             <Column as="ul" gap="16">
                                 {my_project.about.map((about, index) => (
                                     <Text
@@ -32,7 +36,7 @@ export default function Projects() {
                         </Column>
                     ))}
                 </Column>
-            {/* </Column> */}
+            </Column>
         </Column>
     );
 };

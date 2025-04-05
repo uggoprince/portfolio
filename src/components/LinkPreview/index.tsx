@@ -33,13 +33,15 @@ export default function LinkPreview({ url }: LinkPreviewProps) {
   if (!preview) return <p>Loading preview...</p>;
 
   return (
-    <a href={preview.url} target="_blank" rel="noopener noreferrer" className="preview-card">
+    <a href={preview.url} target="_blank" rel="noopener noreferrer" className="preview-card relative w-full h-64 md:h-80 lg:h-96">
         {preview.image && (
             <Image
                 src={preview.image}
                 alt={preview.title}
-                width={100} // You can adjust the width and height
-                height={100}
+                width={560} // You can adjust the width and height
+                height={340}
+                // fill
+                className="w-full h-auto"
             />
         )}
     {/* <h3>{preview.title}</h3>

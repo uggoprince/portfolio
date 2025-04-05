@@ -9,6 +9,7 @@ export async function GET(req: NextRequest) {
     return new NextResponse("URL is required", { status: 400 });
   }
 
+  console.log(url);
   try {
     const response = await fetch(url, {
       headers: { "User-Agent": "Mozilla/5.0" },
