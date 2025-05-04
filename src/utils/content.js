@@ -142,7 +142,7 @@ export const social = [
     {
       name: "LinkedIn",
       icon: "linkedin",
-      link: "https://www.linkedin.com/in/uggoprince",
+      link: "https://www.linkedin.com/in/ugo-anayo",
     },
     // {
     //   name: "X",
