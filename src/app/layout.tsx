@@ -9,8 +9,7 @@ import { Metadata } from "next";
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
-import { Inter } from "next/font/google";
-import { Roboto_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { effects } from "@/utils/config";
@@ -20,12 +19,14 @@ const primary = Inter({
   variable: "--font-primary",
   subsets: ["latin"],
   display: "swap",
+  fallback: ["system-ui", "arial"],
 });
 
 const code = Roboto_Mono({
   variable: "--font-code",
   subsets: ["latin"],
   display: "swap",
+  fallback: ["ui-monospace", "Courier New", "monospace"],
 });
 
 type FontConfig = {
