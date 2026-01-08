@@ -25,11 +25,11 @@ export const experience = {
   label: "Experience",
   title: "Work experience",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  headline: <>Senior Software engineer</>,
+  headline: <>Senior Software Engineer</>,
   subline: (
     <>
-      I'm Ugo, Fullstack Software engineer at {/*<InlineCode>Interswitch</InlineCode>*/}, building intuitive
-      <br /> user and business softwares.
+      Fullstack Engineer specializing in scalable backend systems and {/*at <InlineCode>Interswitch</InlineCode>*/}
+      <br /> polished front-end experiences.
     </>
   ),
   work: {
