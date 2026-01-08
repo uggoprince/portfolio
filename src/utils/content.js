@@ -25,11 +25,11 @@ export const experience = {
   label: "Experience",
   title: "Work experience",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  headline: <>Software engineer and builder</>,
+  headline: <>Senior Software engineer</>,
   subline: (
     <>
-      I'm Ugo, Software engineer at <InlineCode>Interswitch</InlineCode>, building intuitive
-      <br /> user and business softwares. After hours, I work my own projects.
+      I'm Ugo, Fullstack Software engineer at {/*<InlineCode>Interswitch</InlineCode>*/}, building intuitive
+      <br /> user and business softwares.
     </>
   ),
   work: {
@@ -37,8 +37,24 @@ export const experience = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Bazara Tech",
+        timeframe: "2025 Apr - 2025 Dec",
+        role: "Software Engineer",
+        achievements: [
+          <>
+            Frontend engineer working Manovar Connect ITSM.
+            <SmartLink href="https://demo.manovarconnect.com">
+                <Tag variant="accent" size="l" label={"Manovar Connect"} />
+              </SmartLink>
+          </>,
+          <>
+          <Text variant="font-strong-l">Stack:</Text> NodeJs, Nextjs, React, MicroFrontend.
+          </>
+        ],
+      },
+      {
         company: "Interswitch",
-        timeframe: "2022 - Present",
+        timeframe: "2022 Sep - 2025 Apr",
         role: "Software Engineer",
         achievements: [
           <>
@@ -70,7 +86,7 @@ export const experience = {
               <Tag variant="accent" size="l" label={"Bulk Paycode Disbursement"} />
             </SmartLink>
           </>,
-          <><Text variant="font-strong-l">Technologies:</Text> Kotlin, Java, NodeJs, Express, React.</>
+          <><Text variant="font-strong-l">Stack:</Text> Kotlin, Java, NodeJs, Express, React.</>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -84,7 +100,7 @@ export const experience = {
       },
       {
         company: "Sterling Bank",
-        timeframe: "2020 - 2022",
+        timeframe: "2020 Jan - 2022 Sep",
         role: "Software Developer",
         achievements: [
           <>
@@ -101,7 +117,7 @@ export const experience = {
             app to scale as it was also getting much traffic and difficult to maintain its new size.
           </>,
           <>
-            <Text variant="font-strong-l">Technologies:</Text> NodeJs, Express, Postgres, Docker, Azure, RabbitMQ.
+            <Text variant="font-strong-l">Stack:</Text> NodeJs, Express, Postgres, Docker, Azure, RabbitMQ.
           </>
         ],
         images: [],
