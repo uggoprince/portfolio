@@ -232,6 +232,32 @@ export const projects = {
   title: "SIDE PROJECTS",
   work: [
     {
+      title: "FindFixr",
+      description: `FindFixr is a platform that connects users with local handymen and service providers for various home
+        repair and maintenance needs.`,
+      link: "https://findfixr.vercel.app",
+      preview: true,
+      about: [
+        <>
+          Link:&nbsp;
+          <SmartLink key={"https://findfixr.vercel.app"} href="https://findfixr.vercel.app">
+            <Tag variant="accent" size="l" label={"https://findfixr.vercel.app"} />
+          </SmartLink>
+        </>,
+        "The Frontend is built with React and GraphQl using apollo client",
+        <>The Backend is built with NodeJS and GraphQl using apollo server express
+        :&nbsp;
+          <SmartLink key={"https://findfixr.onrender.com/graphql"} href="https://findfixr.onrender.com/graphql">
+            <Tag variant="accent" size="l" label={"https://findfixr.onrender.com/graphql"} />
+          </SmartLink>
+          <SmartLink key={"https://findfixr.onrender.com/api/docs"} href="https://findfixr.onrender.com/api/docs">
+            <Tag variant="accent" size="l" label={"https://findfixr.onrender.com/api/docs"} />
+          </SmartLink>
+        </>,
+        "The CSS framework is Tailwind CSS."
+      ]
+    },
+    {
       title: "HomeSpace",
       description: `HomeSpace is an app where you search and find properties you want to rent. It is an idea I am working on still in
         the development phase.`,

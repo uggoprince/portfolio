@@ -19,6 +19,13 @@ const nextConfig = {
         pathname: '/**/**',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'findfixr.vercel.app',
+        port: '',
+        pathname: '/**',
+        search: '',
+      },
     ],
   }
 };
