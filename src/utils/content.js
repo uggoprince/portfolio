@@ -232,6 +232,30 @@ export const projects = {
   title: "SIDE PROJECTS",
   work: [
     {
+      title: "HomeSpace",
+      description: `HomeSpace is an app where you search and find properties you want to rent. It is an idea I am working on still in
+        the development phase.`,
+      link: "https://homespace.vercel.app",
+      preview: true,
+      about: [
+        <>
+          Link:&nbsp;
+          <SmartLink key={"https://homespace.vercel.app"} href="https://homespace.vercel.app">
+            <Tag variant="accent" size="l" label={"https://homespace.vercel.app"} />
+          </SmartLink>
+        </>,
+        <>
+          Bankend server:&nbsp;
+          <SmartLink key={"https://homespace-xrgv.onrender.com/graphql"} href="https://homespace-xrgv.onrender.com/graphql">
+            <Tag variant="accent" size="l" label={"https://homespace-xrgv.onrender.com/graphql"} />
+          </SmartLink>
+        </>,
+        "The Frontend is built with React and GraphQl using apollo client",
+        "The Backend is built with NodeJS and GraphQl using apollo server express",
+        "The CSS framework is Tailwind CSS."
+      ]
+    },
+    {
       title: "FindFixr",
       description: `FindFixr is a platform that connects users with local handymen and service providers for various home
         repair and maintenance needs.`,
@@ -254,30 +278,6 @@ export const projects = {
             <Tag variant="accent" size="l" label={"https://findfixr.onrender.com/api/docs"} />
           </SmartLink>
         </>,
-        "The CSS framework is Tailwind CSS."
-      ]
-    },
-    {
-      title: "HomeSpace",
-      description: `HomeSpace is an app where you search and find properties you want to rent. It is an idea I am working on still in
-        the development phase.`,
-      link: "https://homespace.vercel.app",
-      preview: true,
-      about: [
-        <>
-          Link:&nbsp;
-          <SmartLink key={"https://homespace.vercel.app"} href="https://homespace.vercel.app">
-            <Tag variant="accent" size="l" label={"https://homespace.vercel.app"} />
-          </SmartLink>
-        </>,
-        <>
-          Bankend server:&nbsp;
-          <SmartLink key={"https://homespace-xrgv.onrender.com/graphql"} href="https://homespace-xrgv.onrender.com/graphql">
-            <Tag variant="accent" size="l" label={"https://homespace-xrgv.onrender.com/graphql"} />
-          </SmartLink>
-        </>,
-        "The Frontend is built with React and GraphQl using apollo client",
-        "The Backend is built with NodeJS and GraphQl using apollo server express",
         "The CSS framework is Tailwind CSS."
       ]
     },
