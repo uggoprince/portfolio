@@ -1,4 +1,4 @@
-import { Column, Heading, Text } from "@/once-ui/components";
+import { Button, Column, Flex, Heading, IconButton, Text } from "@/once-ui/components";
 import { projects } from "@/utils/content";
 import LinkPreview from "@/components/LinkPreview";
 
@@ -8,7 +8,29 @@ export default function Projects() {
             <Heading as="h2" id={projects.title} variant="display-strong-s" marginBottom="m">
                 {projects.title}
             </Heading>
-            <Column fillWidth marginTop="xl">
+            <Heading as="h3" onBackground="neutral-strong" style={{ marginBottom: "0px"}}>
+                <Flex alignItems="center" justifyContent="center" gap="8">
+                <span>Visit my github to see more projects:</span>
+                    <Flex>
+                        <Button
+                            className="s-flex-hide"
+                            href={"https://github.com/uggoprince"}
+                            prefixIcon={"github"}
+                            label={"GitHub"}
+                            size="s"
+                            variant="secondary"
+                        />
+                        <IconButton
+                            className="s-flex-show"
+                            size="l"
+                            href={"https://github.com/uggoprince"}
+                            icon={"github"}
+                            variant="secondary"
+                        />
+                    </Flex>
+                </Flex>
+            </Heading>
+            <Column fillWidth marginTop="l">
                 <Column fillWidth gap="l" marginBottom="40">
                     {projects.work.map((my_project, index) => (
                         <Column key={`${my_project.title}-${index}`} fillWidth>

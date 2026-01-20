@@ -229,7 +229,7 @@ export const education = {
 export const projects = {
   display: true,
   label: "Projects",
-  title: "SIDE PROJECTS",
+  title: "FULLSTACK SIDE PROJECTS",
   work: [
     {
       title: "HomeSpace",
@@ -239,20 +239,19 @@ export const projects = {
       preview: true,
       about: [
         <>
-          Link:&nbsp;
+          
+          Frontend:&nbsp;
           <SmartLink key={"https://homespace.vercel.app"} href="https://homespace.vercel.app">
             <Tag variant="accent" size="l" label={"https://homespace.vercel.app"} />
           </SmartLink>
         </>,
         <>
-          Bankend server:&nbsp;
+          Backend server:&nbsp;
           <SmartLink key={"https://homespace-xrgv.onrender.com/graphql"} href="https://homespace-xrgv.onrender.com/graphql">
             <Tag variant="accent" size="l" label={"https://homespace-xrgv.onrender.com/graphql"} />
           </SmartLink>
         </>,
-        "The Frontend is built with React and GraphQl using apollo client",
-        "The Backend is built with NodeJS and GraphQl using apollo server express",
-        "The CSS framework is Tailwind CSS."
+        <><strong>Stack:</strong> React, NodeJS, Express, PostgreSQL, GraphQl, Tailwind CSS</>
       ]
     },
     {
@@ -263,13 +262,12 @@ export const projects = {
       preview: true,
       about: [
         <>
-          Link:&nbsp;
+          Frontend:&nbsp;
           <SmartLink key={"https://findfixr.vercel.app"} href="https://findfixr.vercel.app">
             <Tag variant="accent" size="l" label={"https://findfixr.vercel.app"} />
           </SmartLink>
         </>,
-        "The Frontend is built with React and GraphQl using apollo client",
-        <>The Backend is built with NodeJS and GraphQl using apollo server express
+        <>Backend API:&nbsp;
         :&nbsp;
           <SmartLink key={"https://findfixr.onrender.com/graphql"} href="https://findfixr.onrender.com/graphql">
             <Tag variant="accent" size="l" label={"https://findfixr.onrender.com/graphql"} />
@@ -278,7 +276,7 @@ export const projects = {
             <Tag variant="accent" size="l" label={"https://findfixr.onrender.com/api/docs"} />
           </SmartLink>
         </>,
-        "The CSS framework is Tailwind CSS."
+        <><strong>Stack:</strong> TypeScript, React, NodeJS, NestJs, Next.js, Express, PostgreSQL, GraphQl, Tailwind CSS</>
       ]
     },
     {
